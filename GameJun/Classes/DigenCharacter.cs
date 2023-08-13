@@ -19,7 +19,8 @@ namespace GameJun.Classes
 
         public override void Attack(AbstractCharacter other)
         {
-            other.Damage(damage);
+            Random random = new Random();
+            other.Damage(random.Next(damage - 2, damage + 3));
         }
 
         public override void Damage(int amount)

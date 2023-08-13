@@ -9,6 +9,7 @@ namespace GameJun
         static void Main(string[] args)
         {
              AbstractGame game = new Game();
+            game.SelectPlayers();
             game.Start();
             Console.ReadLine();
         }

@@ -12,13 +12,14 @@ namespace GameJun.Classes
         public TolyaCharacter()
         {
             health = 15;
-            defense = 4;
-            damage = 8;
+            defense = 3;
+            damage = 7;
             name = "Tolya";
         }
         public override void Attack(AbstractCharacter other)
         {
-            other.Damage(damage);
+            Random random = new Random();
+            other.Damage(random.Next(damage - 2, damage + 3));
         }
 
         public override void Damage(int amount)
