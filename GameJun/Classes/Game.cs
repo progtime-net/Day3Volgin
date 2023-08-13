@@ -38,6 +38,11 @@ namespace GameJun.Classes
 
         public override void Start()
         {
+            if (choosen == null || enemy == null)
+            {
+                Console.WriteLine("вы не выбрали персонажа, нажмите Enter и перезапустите игру!");
+                Console.ReadLine();
+            }
             Console.WriteLine("ДА НАЧНЕТСЯ БИТВА!!!");
             Console.WriteLine();
             while(choosen.IsAlive() && enemy.IsAlive())
